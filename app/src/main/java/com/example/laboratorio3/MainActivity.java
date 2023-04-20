@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void InicializarControles() {
 
-        List<Integer> ops = Arrays.asList(0,1,2,3,4);
-        ArrayAdapter<Integer> adapterList = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, ops);
+        List<String> ops = Arrays.asList("Sumar","Restar","Multiplicar","División","Exponente");
+        ArrayAdapter<String> adapterList = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, ops);
         txtNum1 = (EditText) findViewById(R.id.txtNum1);
         txtNum2 = (EditText) findViewById(R.id.txtNum2);
         spnOper = (Spinner) findViewById(R.id.spnOper);
@@ -47,24 +47,24 @@ public class MainActivity extends AppCompatActivity {
         try{
             int n1 = Integer.parseInt(txtNum1.getText().toString());
             int n2 = Integer.parseInt(txtNum2.getText().toString());
-            int op = Integer.parseInt(spnOper.getSelectedItem().toString());
+            String op = spnOper.getSelectedItem().toString();
             int resultado;
 
             // Cambiar a String despues pa que este bonito :)
             switch (op){
-                case 0:
+                case "Sumar":
                     resultado = n1+n2;
                     break;
-                case 1:
+                case "Restar":
                     resultado = n1-n2;
                     break;
-                case 2:
+                case "Multiplicar":
                     resultado = n1*n2;
                     break;
-                case 3:
+                case "División":
                     resultado = n1/n2;
                     break;
-                case 4:
+                case "Exponente":
                     resultado = (int) Math.pow(n1, n2);
                     break;
                 default:
