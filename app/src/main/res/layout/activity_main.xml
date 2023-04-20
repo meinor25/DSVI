@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp">
+
+        <TextView
+            android:id="@+id/descPrograma"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:text="Esto es una calculadora de dos valores."
+            android:textSize="27dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/descPrograma">
+        </Space>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:hint="Introduzca primer numero"
+            android:textSize="20dp"
+            android:layout_below="@id/descPrograma"
+            android:id="@+id/txtNum1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNum1"
+            android:paddingBottom="10dp"
+            android:hint="Introduzca segundo numero"
+            android:textSize="20dp"
+            android:id="@+id/txtNum2"/>
+
+        <Spinner
+            android:id="@+id/spnOper"
+            android:layout_width="match_parent"
+            android:paddingBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNum2"></Spinner>
+
+        <TextView
+            android:id="@+id/descSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spnOper"
+            android:text="Seleccione una operación."
+            android:textSize="17dp"
+            android:textAlignment="center">
+
+        </TextView>
+    
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnRes"
+            android:id="@+id/chkDialogo"
+            android:text="Resultado en otra cajita?"
+            android:textSize="17dp"/>
+
+        <Button
+            android:id="@+id/btnRes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular"
+            android:layout_below="@id/descSpinner"
+            android:onClick="CalcularRes"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chkDialogo"
+            android:id="@+id/lblRes"
+            android:textSize="32dp"
+            android:textAlignment="center"/>
+
+
+</RelativeLayout>
